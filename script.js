@@ -5,7 +5,27 @@ let choices = document.querySelectorAll(".choice");
 let paraMsg = document.querySelector("#msg");
 let userScoreBoard = document.querySelector("#you");
 let compScoreBoard = document.querySelector("#comp");
+let reset = document.querySelector(".reset-btn");
+let dropButton = document.querySelector(".drop-btn");
+let dropContent  = document.querySelector(".drop-content");
 
+
+dropButton.addEventListener("click",()=>{
+   dropContent.classList.toggle("drop");
+})
+
+reset.addEventListener("click",()=>{
+    resetGame();
+})
+
+const resetGame = ()=>{
+    userScore = 0;
+    compScore = 0;
+    userScoreBoard.innerText = userScore;
+    compScoreBoard.innerText = compScore;
+    paraMsg.innerText = "Play your move";
+    paraMsg.style.backgroundColor = "#4297a0";
+}
 
 const drawGame = () =>{
     paraMsg.innerText = "Game Draw!! Play Again.";
@@ -13,8 +33,8 @@ const drawGame = () =>{
 };
 
 
-const genCompChoice = () =>{
-    const options = ["rock","paper","scissors"];
+const createCompChoice = () =>{
+    const options = ["wizard","dragon","knight"];
     const ranIndx = Math.floor(Math.random()*3);
     return options[ranIndx];
 };
@@ -37,21 +57,21 @@ const showWinner = (userWin,userChoice,compChoice) =>{
 
 
 const playGame = (userChoice) => {
-     let compChoice = genCompChoice();
+     let compChoice = createCompChoice();
      if(userChoice === compChoice){
          drawGame();
         
      }
      else{
         let userWin = true;
-        if(userChoice === "rock"){
-            userWin = compChoice === "scissors" ? true : false;
+        if(userChoice === "wizard"){
+            userWin = compChoice === "dragon" ? true : false;
         }
-        else if(userChoice === "scissors"){
-            userWin = compChoice === "paper" ? true : false;
+        else if(userChoice === "dragon"){
+            userWin = compChoice === "knight" ? true : false;
         }
         else{
-            userWin = compChoice === "rock" ? true : false;
+            userWin = compChoice === "wizard" ? true : false;
         }
         showWinner(userWin,userChoice,compChoice);
      }
