@@ -33,8 +33,8 @@ A dynamic, interactive, and fun game inspired by "Rock, Paper, Scissors." This g
 
 
 ## 🐉 Screenshots
--  ![Wizard image](wizard pic.png)
--  ![Rules image](Rules pic.png)
+   ![Wizard image](<wizard pic.png>)
+   ![Rules image](<Rules pic.png>)
 
 
 
