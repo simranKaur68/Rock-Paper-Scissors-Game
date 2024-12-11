@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Rock Paper Scissors</h1>
+    <h1>Wizard Dragon Knight </h1>
+    <div class="dropdown">
+        <button class="drop-btn">Rules</button>
+        <div class="drop-content">
+            <p> <span>◾</span>Dragon beats Knight (breathes fire).</p>
+            <p> <span>◾</span>Wizard beats Dragon (casts a spell).</p>
+            <p> <span>◾</span>Knight beats Wizard (with brute force).</p>
+        </div>
+    </div>
     <div class="choices">
-        <div class="choice" id="rock">
-            <img  src="images/rock.png" alt="" >
+        <div class="choice" id="wizard">
+            <img src="images/wizard.png" alt="">
         </div>
-        <div class="choice" id="paper">
-            <img src="images/paper.png" alt="" >
+        <div class="choice" id="dragon">
+            <img src="images/dragon.png" alt="">
         </div>
-        <div class="choice" id="scissors">
-            <img src="images/scissors.png" alt="" >
+        <div class="choice" id="knight">
+            <img src="images/knight.png" alt="">
         </div>
     </div>
     <div class="scores">
@@ -32,6 +41,10 @@
     <div class="msgDisplay">
         <p id="msg">Play your move</p>
     </div>
+    <div class="reset">
+        <button class="reset-btn">Reset Game</button>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
