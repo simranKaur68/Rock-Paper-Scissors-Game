@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 
 h1{
@@ -9,13 +10,57 @@ h1{
     height: 5rem;
     text-align: center;
     line-height: 5rem;
+    font-size: 2.5rem;
 }
+
+.dropdown{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+
+.drop-btn{
+    background-color: lightcoral;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+.drop-btn:hover{
+    background-color: lightpink;
+    color: black;
+}
+
+.drop-content{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    background-color: lightyellow;
+    padding: 20px 10px;
+    border-radius: 15px;
+    min-width: 200px;
+}
+
+.drop-content.drop{
+    display: block;
+}
+
+span{
+    padding: 0 5px 0 0;
+}
+
 
 .choices{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 2rem;
     gap: 4rem;
 }
 
@@ -23,12 +68,14 @@ h1{
     opacity: 0.8;
     cursor: pointer;
     transform: translateY(5px);
+    background-color:lightyellow;
 }
 
 .choice{
     height: 200px;
     width: 200px;
     border-radius: 50%;
+    transition: all .6s ease-in-out;
 }
 
 img{
@@ -43,8 +90,8 @@ img{
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    font-size: 1.5rem;
-    margin-top: 1.8rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
 }
 
 .score{
@@ -52,22 +99,45 @@ img{
 }
 
 #you, #comp{
-    font-size: 3rem ;
+    font-size: 2.8rem ;
 }
 
 .msgDisplay{
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
 }
 
 #msg{
     background-color: #4297a0;
     color: white;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     padding: .6rem;
     display: inline;
     border-radius: 10px;
+    cursor: pointer;
 
+}
+
+
+.reset{
+    text-align: center;
+    margin-top: 1.8rem;
+}
+
+.reset-btn{
+    background-color: palevioletred;
+    color: white;
+    font-size: 1.2rem;
+    padding: .6rem;
+    border-radius: 10px;
+    border: none;
+    
+}
+
+.reset-btn:hover{
+    background-color: lightpink;
+    cursor: pointer;
+    transform: translateY(-5px);
 }
 
 @media (max-width:740px){
